@@ -25,7 +25,8 @@ export const cardNumber = v8n()
 export const dueDate = v8n()
   .not.undefined()
   .not.null()
-  .instanceOf(Date);
+  .string()
+  .pattern(/^([0][123456789]|11|12){1}\/([0-9]{2,})$/);
 
 export const cvv = v8n()
   .not.undefined()

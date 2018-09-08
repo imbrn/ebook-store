@@ -98,7 +98,7 @@ describe("payment", () => {
       method: "creditCard",
       cardholderName: "Customer Name",
       cardNumber: "1234567891011121",
-      dueDate: new Date(2025, 11),
+      dueDate: "12/25",
       cvv: "123"
     };
 

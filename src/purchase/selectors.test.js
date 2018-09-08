@@ -172,7 +172,7 @@ test("isPaymentComplete", () => {
         method: "creditCard",
         cardholderName: "Customer Name",
         cardNumber: "4123456789012345",
-        dueDate: new Date(2026, 2)
+        dueDate: "02/26"
       }
     })
   ).toBeFalsy();
@@ -183,7 +183,7 @@ test("isPaymentComplete", () => {
         method: "creditCard",
         cardholderName: "Customer Name",
         cardNumber: "4123456789012345",
-        dueDate: new Date(2026, 2),
+        dueDate: "02/25",
         cvv: "123"
       }
     })

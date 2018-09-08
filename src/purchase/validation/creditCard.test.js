@@ -24,10 +24,14 @@ test("cardNumber", () => {
 });
 
 test("dueDate", () => {
-  expect(dueDate.test(new Date(2025, 11))).toBeTruthy();
-  expect(dueDate.test("12/25")).toBeFalsy();
+  expect(dueDate.test("12/25")).toBeTruthy();
+  expect(dueDate.test("12/75")).toBeTruthy();
+  expect(dueDate.test("01/25")).toBeTruthy();
+  expect(dueDate.test("12/2025")).toBeTruthy();
+  expect(dueDate.test("00/25")).toBeFalsy();
+  expect(dueDate.test("1/25")).toBeFalsy();
+  expect(dueDate.test("32/25")).toBeFalsy();
   expect(dueDate.test("2025/12")).toBeFalsy();
-  expect(dueDate.test("12/2025")).toBeFalsy();
   expect(dueDate.test("")).toBeFalsy();
   expect(dueDate.test(null)).toBeFalsy();
   expect(dueDate.test()).toBeFalsy();
