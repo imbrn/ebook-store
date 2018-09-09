@@ -1,5 +1,4 @@
 import { name, email, cpf } from "./personalData";
-import personalData from "./personalData";
 
 test("name", () => {
   expect(name.test("Customer Name")).toBeTruthy();
