@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      1
+    </span>
+    <span
+      class=""
+    >
+      Personal data
+    </span>
+  </header>
+  <div>
+    <form>
+      <div>
+        <div>
+          <label
+            class=""
+            for="0"
+          >
+            Name
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="0"
+            name="name"
+            placeholder="Your name here"
+            type="text"
+            value="Customer Name"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="1"
+          >
+            E-email
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="1"
+            name="email"
+            placeholder="Your e-mail here"
+            type="text"
+            value="customer@email.com"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="2"
+          >
+            CPF
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="2"
+            name="cpf"
+            placeholder="Your CPF here"
+            type="text"
+            value="12345678910"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      3
+    </span>
+    <span
+      class=""
+    >
+      Payment
+    </span>
+  </header>
+  <div>
+    <div>
+      <button
+        class=""
+      >
+        Boleto Bancário
+      </button>
+      <button
+        class=""
+      >
+        Credit Card
+      </button>
+    </div>
+    <form>
+      <div>
+        <div>
+          <label
+            class=""
+            for="1"
+          >
+            Cardholder name
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="1"
+            name="cardholderName"
+            placeholder="Your name here"
+            type="text"
+            value="Customer Name"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="2"
+          >
+            Card number
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="2"
+            name="cardNumber"
+            placeholder="1234567891011121"
+            type="text"
+            value="4123456789012"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="3"
+          >
+            Due date
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="3"
+            name="dueDate"
+            placeholder="12/25"
+            type="text"
+            value="Mon Dec 01 2025 00:00:00 GMT-0200 (-02)"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="4"
+          >
+            CVV
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="4"
+            name="cvv"
+            placeholder="123"
+            type="text"
+            value="123"
+          />
+        </div>
+      </div>
+      <button
+        class=""
+        disabled=""
+      >
+        Buy now
+      </button>
+    </form>
+  </div>
+</div>
+`;

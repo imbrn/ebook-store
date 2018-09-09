@@ -7,5 +7,6 @@ module.exports = {
   verbose: true,
   roots: [srcPath],
   transform: { "\\.js$": "<rootDir>/babelTransformer.js" },
-  setupFiles: ["<rootDir>/setup.js"]
+  setupFiles: ["<rootDir>/setup.js"],
+  setupTestFrameworkScriptFile: "<rootDir>/setupTestFramework.js"
 };

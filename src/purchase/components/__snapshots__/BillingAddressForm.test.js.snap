@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      2
+    </span>
+    <span
+      class=""
+    >
+      Billing Address
+    </span>
+  </header>
+  <div>
+    <form>
+      <div>
+        <div>
+          <label
+            class=""
+            for="1"
+          >
+            Zip code
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="1"
+            name="zipCode"
+            placeholder="Your zip code here"
+            type="text"
+            value="14530000"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="2"
+          >
+            State
+          </label>
+        </div>
+        <div>
+          <input
+            id="2"
+            name="state"
+            options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+            placeholder="Your state here"
+            type="text"
+            value="São Paulo"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="3"
+          >
+            City
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="3"
+            name="city"
+            placeholder="Your city here"
+            type="text"
+            value="Miguelópolis"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label
+            class=""
+            for="4"
+          >
+            Address
+          </label>
+        </div>
+        <div>
+          <input
+            class=""
+            id="4"
+            name="address"
+            placeholder="Your full address here"
+            type="text"
+            value="Av. Leopoldo Carlos de Oliveira, 1234"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

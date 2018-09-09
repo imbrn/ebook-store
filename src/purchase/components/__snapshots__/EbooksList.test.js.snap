@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbookItem renders correctly 1`] = `
+<div>
+  <input
+    class=""
+    type="checkbox"
+    value="15"
+  />
+  <img
+    class=""
+    src=""
+  />
+  <div>
+    <span
+      class=""
+    >
+      Ebook 15
+    </span>
+    <span
+      class=""
+    >
+      The ebook 15
+    </span>
+  </div>
+  <span
+    class=""
+  >
+    R$ 1500,00
+  </span>
+</div>
+`;
+
+exports[`EbooksList renders correctly 1`] = `
+<div>
+  <ul>
+    <li>
+      <div>
+        <input
+          checked=""
+          class=""
+          type="checkbox"
+          value="1"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 1
+          </span>
+          <span
+            class=""
+          >
+            The ebook 1
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 100,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          checked=""
+          class=""
+          type="checkbox"
+          value="2"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 2
+          </span>
+          <span
+            class=""
+          >
+            The ebook 2
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 200,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="3"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 3
+          </span>
+          <span
+            class=""
+          >
+            The ebook 3
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 300,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="4"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 4
+          </span>
+          <span
+            class=""
+          >
+            The ebook 4
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 400,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="5"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 5
+          </span>
+          <span
+            class=""
+          >
+            The ebook 5
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 500,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          checked=""
+          class=""
+          type="checkbox"
+          value="6"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 6
+          </span>
+          <span
+            class=""
+          >
+            The ebook 6
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 600,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="7"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 7
+          </span>
+          <span
+            class=""
+          >
+            The ebook 7
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 700,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="8"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 8
+          </span>
+          <span
+            class=""
+          >
+            The ebook 8
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 800,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          checked=""
+          class=""
+          type="checkbox"
+          value="9"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 9
+          </span>
+          <span
+            class=""
+          >
+            The ebook 9
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 900,00
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <input
+          class=""
+          type="checkbox"
+          value="10"
+        />
+        <img
+          class=""
+          src=""
+        />
+        <div>
+          <span
+            class=""
+          >
+            Ebook 10
+          </span>
+          <span
+            class=""
+          >
+            The ebook 10
+          </span>
+        </div>
+        <span
+          class=""
+        >
+          R$ 1000,00
+        </span>
+      </div>
+    </li>
+  </ul>
+  <div>
+    <span
+      class=""
+    >
+      TOTAL
+    </span>
+    <span
+      class=""
+    >
+      R$ 1800,00
+    </span>
+  </div>
+</div>
+`;
