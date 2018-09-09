@@ -1,10 +1,6 @@
-import {
-  TOGGLE_EBOOK_SELECTION,
-  UPDATE_PERSONAL_DATA,
-  UPDATE_BILLING_ADDRESS,
-  UPDATE_PAYMENT,
-  BUY
-} from "./actionsTypes";
+import { combineReducers } from "redux";
+
+import { TOGGLE_EBOOK_SELECTION, BUY } from "./actionsTypes";
 
 export function ebooks(state = [], action) {
   switch (action.type) {
@@ -26,50 +22,38 @@ function toggleEbookSelection(state, action) {
   }
 }
 
-export function personalData(state = {}, action) {
-  switch (action.type) {
-    case UPDATE_PERSONAL_DATA:
-      return action.data;
-    default:
-      return state;
-  }
-}
-
-export function billingAddress(state = {}, action) {
-  switch (action.type) {
-    case UPDATE_BILLING_ADDRESS:
-      return action.data;
-    default:
-      return state;
-  }
-}
-
-export function payment(state = {}, action) {
-  switch (action.type) {
-    case UPDATE_PAYMENT:
-      return action.data;
-    default:
-      return state;
-  }
-}
-
-export function status(state = { type: "initial" }, action) {
+export function status(state = { kind: "initial" }, action) {
   switch (action.type) {
     case BUY:
-      return onStatus(state, action);
+      return onStatus(action);
     default:
       return state;
   }
 }
 
-function onStatus(state, action) {
+function onStatus(action) {
   switch (action.status) {
     case "success":
       return {
-        type: "success",
-        purchaseId: action.purchaseId
+        kind: "success",
+        purchaseId: action.purchaseId,
+        data: action.data
+      };
+    case "fail":
+      return {
+        kind: "fail",
+        cause: action.cause,
+        data: action.data
       };
     default:
-      return state;
+      return {
+        kind: action.status,
+        data: action.data
+      };
   }
 }
+
+export default combineReducers({
+  ebooks,
+  status
+});

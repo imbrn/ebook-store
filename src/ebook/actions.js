@@ -6,7 +6,8 @@ export function fetchAllEbooks() {
     dispatch(onFetchAllEbooks("request"));
     return getService()
       .fetchAllEbooks()
-      .then(ebooks => dispatch(onFetchAllEbooks("success", { ebooks })));
+      .then(ebooks => dispatch(onFetchAllEbooks("success", { ebooks })))
+      .catch(cause => dispatch(onFetchAllEbooks("fail", { cause })));
   };
 }
 

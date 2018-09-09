@@ -11,18 +11,34 @@ beforeAll(() => {
   mockStore = configureMockStore([reduxThunk]);
 });
 
-test("fetchAllEbooks", async () => {
-  const store = mockStore({});
-  const ebooks = fakeEbooks(10);
+describe("fetchAllEbooks", () => {
+  test("success", async () => {
+    const store = mockStore({});
+    const ebooks = fakeEbooks(10);
 
-  setService({
-    fetchAllEbooks: () => Promise.resolve(ebooks)
+    setService({
+      fetchAllEbooks: () => Promise.resolve(ebooks)
+    });
+
+    await store.dispatch(fetchAllEbooks());
+
+    expect(store.getActions()).toEqual([
+      { type: FETCH_ALL_EBOOKS, status: "request" },
+      { type: FETCH_ALL_EBOOKS, status: "success", ebooks }
+    ]);
   });
 
-  await store.dispatch(fetchAllEbooks());
+  test("fail", async () => {
+    const store = mockStore({});
+    setService({
+      fetchAllEbooks: () => Promise.reject("Error")
+    });
 
-  expect(store.getActions()).toEqual([
-    { type: FETCH_ALL_EBOOKS, status: "request" },
-    { type: FETCH_ALL_EBOOKS, status: "success", ebooks }
-  ]);
+    await store.dispatch(fetchAllEbooks());
+
+    expect(store.getActions()).toEqual([
+      { type: FETCH_ALL_EBOOKS, status: "request" },
+      { type: FETCH_ALL_EBOOKS, status: "fail", cause: "Error" }
+    ]);
+  });
 });
