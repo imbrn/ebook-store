@@ -2,7 +2,8 @@ import {
   TOGGLE_EBOOK_SELECTION,
   UPDATE_PERSONAL_DATA,
   UPDATE_BILLING_ADDRESS,
-  UPDATE_PAYMENT
+  UPDATE_PAYMENT,
+  BUY
 } from "./actionsTypes";
 
 export function ebooks(state = [], action) {
@@ -47,6 +48,27 @@ export function payment(state = {}, action) {
   switch (action.type) {
     case UPDATE_PAYMENT:
       return action.data;
+    default:
+      return state;
+  }
+}
+
+export function status(state = { type: "initial" }, action) {
+  switch (action.type) {
+    case BUY:
+      return onStatus(state, action);
+    default:
+      return state;
+  }
+}
+
+function onStatus(state, action) {
+  switch (action.status) {
+    case "success":
+      return {
+        type: "success",
+        purchaseId: action.purchaseId
+      };
     default:
       return state;
   }

@@ -2,14 +2,16 @@ import {
   ebooks as selectedEbooks,
   personalData,
   billingAddress,
-  payment
+  payment,
+  status
 } from "./reducers";
 
 import {
   TOGGLE_EBOOK_SELECTION,
   UPDATE_PERSONAL_DATA,
   UPDATE_BILLING_ADDRESS,
-  UPDATE_PAYMENT
+  UPDATE_PAYMENT,
+  BUY
 } from "./actionsTypes";
 
 import { fakeEbooks, fakeEbook } from "../ebook/fakeEbook";
@@ -111,5 +113,24 @@ describe("payment", () => {
         }
       )
     ).toEqual(data);
+  });
+});
+
+describe("status", () => {
+  test("default state", () => {
+    expect(status(undefined, {})).toEqual({ type: "initial" });
+  });
+
+  test("handle BUY with success", () => {
+    expect(
+      status("initial", {
+        type: BUY,
+        status: "success",
+        purchaseId: 123
+      })
+    ).toEqual({
+      type: "success",
+      purchaseId: 123
+    });
   });
 });
