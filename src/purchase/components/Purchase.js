@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import EbooksList from "./EbooksList";
 import DataForm from "./DataForm";
 import styles from "./Purchase.css";
+import BarCodeSvg from "../../common/icons/bar-code.svg";
+import MasterCardSvg from "../../common/icons/mastercard.svg";
+import VisaSvg from "../../common/icons/visa.svg";
 
 export const Purchase = ({ ebooks, purchase }) => {
   const renderContent = () => {
@@ -66,6 +69,12 @@ export const Purchase = ({ ebooks, purchase }) => {
         <div className={styles.about}>
           <Text bold>E-book Store</Text>
           <Text>Powered by EBANX • Products B2B</Text>
+        </div>
+
+        <div className={styles.flags}>
+          <BarCodeSvg />
+          <VisaSvg />
+          <MasterCardSvg />
         </div>
       </footer>
     </div>

@@ -10,6 +10,7 @@ module.exports = {
   setupFiles: ["<rootDir>/setup.js"],
   setupTestFrameworkScriptFile: "<rootDir>/setupTestFramework.js",
   moduleNameMapper: {
-    "\\.css$": "<rootDir>/mocks/styleMock.js"
+    "\\.css$": "<rootDir>/mocks/styleMock.js",
+    "\\.svg$": "<rootDir>/mocks/svgMock.js"
   }
 };

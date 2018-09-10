@@ -25,7 +25,7 @@ const StepPanel = ({
       <Number open={open}>{number}</Number>
       <Text bold>{title}</Text>
     </header>
-    {true ? ( // TODO: remove
+    {open ? (
       <div className={classnames(styles.stepPanelChildren, childrenClassName)}>
         {children}
       </div>

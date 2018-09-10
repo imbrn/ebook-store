@@ -34,9 +34,18 @@
 }
 
 .paymentMethodButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-grow: 2;
   margin: 10px;
   height: 106px;
+
+  svg {
+    width: auto;
+    pointer-events: none;
+  }
 }
 
 .paymentBuyNowButton {

@@ -7,6 +7,8 @@ import { requestBuy } from "../actions";
 import { hasEbooksSelected } from "../selectors";
 import { getService } from "../../service";
 import personalDataValidation from "../validation/personalData";
+import BarCodeSvg from "../../common/icons/bar-code.svg";
+import CreditCardSvg from "../../common/icons/credit-card.svg";
 
 import billingAddressValidation, {
   zipCode as zipCodeValidation
@@ -235,6 +237,7 @@ export class DataForm extends PureComponent {
           selected={values.payment.method === "boleto"}
           onClick={this.changePaymentMethod}
         >
+          <BarCodeSvg />
           Boleto Bancário
         </Button>
 
@@ -245,6 +248,7 @@ export class DataForm extends PureComponent {
           selected={values.payment.method === "creditCard"}
           onClick={this.changePaymentMethod}
         >
+          <CreditCardSvg />
           Credit Card
         </Button>
 
@@ -348,7 +352,7 @@ export class DataForm extends PureComponent {
 
   changePaymentMethod(e) {
     this.setInnerState("values", "payment", {
-      method: e.target.dataset.method
+      method: e.currentTarget.dataset.method
     });
   }
 

@@ -5,9 +5,22 @@
   & > footer {
     padding: 40px 0;
   }
+
+  & > footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .about {
   display: flex;
   flex-direction: column;
+}
+
+.flags {
+  svg {
+    width: auto;
+    height: 26px;
+    margin: 0 2px;
+  }
 }
