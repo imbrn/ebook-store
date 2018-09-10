@@ -1,8 +1,9 @@
 import React from "react";
-import { Text, CheckBox, Image } from "../../common/components";
+import { Text, CheckBox, Image, Separator } from "../../common/components";
 import formatPrice from "../../common/utils/formatPrice";
 import { connect } from "react-redux";
 import { toggleEbookSelection } from "../actions";
+import styles from "./EbooksList.css";
 
 export const EbooksList = ({
   ebooks,
@@ -11,7 +12,7 @@ export const EbooksList = ({
   toggleEbookSelection
 }) => {
   return (
-    <div>
+    <div className={styles.ebooksList}>
       <ul>
         {ebooks.items.map(ebook => (
           <li key={ebook.id}>
@@ -25,9 +26,15 @@ export const EbooksList = ({
         ))}
       </ul>
 
-      <div>
-        <Text>TOTAL</Text>
-        <Text>{formatPrice(totalSum(purchase.ebooks))}</Text>
+      <Separator />
+
+      <div className={styles.totalBox}>
+        <Text bold size="medium">
+          TOTAL
+        </Text>
+        <Text bold size="medium">
+          {formatPrice(totalSum(purchase.ebooks))}
+        </Text>
       </div>
     </div>
   );
@@ -48,28 +55,28 @@ EbooksList.defaultProps = {
 
 export const EbookItem = ({
   ebook,
-  thumb,
   selected,
   formatPrice,
   onRequestSelectChange
 }) => (
-  <div>
+  <div className={styles.ebookItem}>
     <CheckBox
       value={ebook.id}
       checked={selected}
       onChange={e => onRequestSelectChange(!selected, e)}
     />
-    <Image src={thumb} />
-    <div>
-      <Text>{ebook.name}</Text>
+    <Image src={`public/images/ebooks/${ebook.id}.png`} />
+    <div className={styles.ebookItemTitle}>
+      <Text bold>{ebook.name}</Text>
       <Text>{ebook.description}</Text>
     </div>
-    <Text>{formatPrice(ebook.price)}</Text>
+    <Text bold size="medium">
+      {formatPrice(ebook.price)}
+    </Text>
   </div>
 );
 
 EbookItem.defaultProps = {
-  thumb: "",
   formatPrice,
   onRequestSelectChange: () => {}
 };

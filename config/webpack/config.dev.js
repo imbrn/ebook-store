@@ -11,7 +11,8 @@ module.exports = {
   entry: "./src/main.js",
   output: {
     filename: "main.js",
-    path: distPath
+    path: distPath,
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -21,6 +22,24 @@ module.exports = {
           loader: "babel-loader",
           options: require("./babel.config.dev")
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              config: { path: "./config/webpack" }
+            }
+          }
+        ]
       }
     ]
   },

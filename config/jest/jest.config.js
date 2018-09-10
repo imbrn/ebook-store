@@ -8,5 +8,8 @@ module.exports = {
   roots: [srcPath],
   transform: { "\\.js$": "<rootDir>/babelTransformer.js" },
   setupFiles: ["<rootDir>/setup.js"],
-  setupTestFrameworkScriptFile: "<rootDir>/setupTestFramework.js"
+  setupTestFrameworkScriptFile: "<rootDir>/setupTestFramework.js",
+  moduleNameMapper: {
+    "\\.css$": "<rootDir>/mocks/styleMock.js"
+  }
 };

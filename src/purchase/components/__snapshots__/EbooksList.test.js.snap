@@ -1,30 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EbookItem renders correctly 1`] = `
+.c0 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.c1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c4 {
+  font-size: 14px;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 <div>
-  <input
-    class=""
-    type="checkbox"
-    value="15"
-  />
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+    <input
+      class="c2"
+      type="checkbox"
+      value="15"
+    />
+  </div>
   <img
     class=""
-    src=""
+    src="public/images/ebooks/15.png"
   />
   <div>
     <span
-      class=""
+      class="c3"
     >
       Ebook 15
     </span>
     <span
-      class=""
+      class="c4"
     >
       The ebook 15
     </span>
   </div>
   <span
-    class=""
+    class="c5"
   >
     R$ 1500,00
   </span>
@@ -32,33 +74,96 @@ exports[`EbookItem renders correctly 1`] = `
 `;
 
 exports[`EbooksList renders correctly 1`] = `
+.c0 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.c1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  width: 2px;
+  height: 2px;
+  left: 3px;
+  top: 7px;
+  box-shadow: 2px 0 0 black,4px 0 0 black,4px -2px 0 black, 4px -4px 0 black,4px -6px 0 black,4px -8px 0 black;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c4 {
+  font-size: 14px;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c7 {
+  border: none;
+  height: 2px;
+  background: #dedede;
+}
+
 <div>
   <ul>
     <li>
       <div>
-        <input
-          class=""
-          type="checkbox"
-          value="1"
-        />
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          />
+          <input
+            class="c2"
+            type="checkbox"
+            value="1"
+          />
+        </div>
         <img
           class=""
-          src=""
+          src="public/images/ebooks/1.png"
         />
         <div>
           <span
-            class=""
+            class="c3"
           >
             Ebook 1
           </span>
           <span
-            class=""
+            class="c4"
           >
             The ebook 1
           </span>
         </div>
         <span
-          class=""
+          class="c5"
         >
           R$ 100,00
         </span>
@@ -66,30 +171,37 @@ exports[`EbooksList renders correctly 1`] = `
     </li>
     <li>
       <div>
-        <input
-          checked=""
-          class=""
-          type="checkbox"
-          value="2"
-        />
+        <div
+          class="c0"
+        >
+          <div
+            class="c6"
+          />
+          <input
+            checked=""
+            class="c2"
+            type="checkbox"
+            value="2"
+          />
+        </div>
         <img
           class=""
-          src=""
+          src="public/images/ebooks/2.png"
         />
         <div>
           <span
-            class=""
+            class="c3"
           >
             Ebook 2
           </span>
           <span
-            class=""
+            class="c4"
           >
             The ebook 2
           </span>
         </div>
         <span
-          class=""
+          class="c5"
         >
           R$ 200,00
         </span>
@@ -97,29 +209,36 @@ exports[`EbooksList renders correctly 1`] = `
     </li>
     <li>
       <div>
-        <input
-          class=""
-          type="checkbox"
-          value="3"
-        />
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          />
+          <input
+            class="c2"
+            type="checkbox"
+            value="3"
+          />
+        </div>
         <img
           class=""
-          src=""
+          src="public/images/ebooks/3.png"
         />
         <div>
           <span
-            class=""
+            class="c3"
           >
             Ebook 3
           </span>
           <span
-            class=""
+            class="c4"
           >
             The ebook 3
           </span>
         </div>
         <span
-          class=""
+          class="c5"
         >
           R$ 300,00
         </span>
@@ -127,44 +246,54 @@ exports[`EbooksList renders correctly 1`] = `
     </li>
     <li>
       <div>
-        <input
-          checked=""
-          class=""
-          type="checkbox"
-          value="4"
-        />
+        <div
+          class="c0"
+        >
+          <div
+            class="c6"
+          />
+          <input
+            checked=""
+            class="c2"
+            type="checkbox"
+            value="4"
+          />
+        </div>
         <img
           class=""
-          src=""
+          src="public/images/ebooks/4.png"
         />
         <div>
           <span
-            class=""
+            class="c3"
           >
             Ebook 4
           </span>
           <span
-            class=""
+            class="c4"
           >
             The ebook 4
           </span>
         </div>
         <span
-          class=""
+          class="c5"
         >
           R$ 400,00
         </span>
       </div>
     </li>
   </ul>
+  <hr
+    class="c7"
+  />
   <div>
     <span
-      class=""
+      class="c5"
     >
       TOTAL
     </span>
     <span
-      class=""
+      class="c5"
     >
       R$ 600,00
     </span>

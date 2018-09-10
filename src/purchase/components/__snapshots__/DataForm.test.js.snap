@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
 <form>
   <div>
     <header>
@@ -10,7 +15,7 @@ exports[`renders correctly 1`] = `
         1
       </span>
       <span
-        class=""
+        class="c0"
       >
         Personal data
       </span>
@@ -24,7 +29,7 @@ exports[`renders correctly 1`] = `
         2
       </span>
       <span
-        class=""
+        class="c0"
       >
         Billing Address
       </span>
@@ -38,7 +43,7 @@ exports[`renders correctly 1`] = `
         3
       </span>
       <span
-        class=""
+        class="c0"
       >
         Payment
       </span>

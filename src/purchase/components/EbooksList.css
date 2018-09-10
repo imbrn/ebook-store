@@ -1,0 +1,32 @@
+.ebooksList {
+  li {
+    margin: 40px 0;
+    list-style: none;
+  }
+}
+
+.ebookItem {
+  display: flex;
+  align-items: center;
+
+  & > img {
+    margin-left: 40px;
+  }
+
+  & > .ebookItemTitle {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & > * {
+      max-width: 300px;
+    }
+  }
+}
+
+.totalBox {
+  padding: 38px 0;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,10 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly fetching ebooks 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c1 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c2 {
+  font-size: 14px;
+}
+
 <div>
   <header>
     <span
-      class=""
+      class="c0"
     >
       E-book Store
     </span>
@@ -17,12 +31,12 @@ exports[`renders correctly fetching ebooks 1`] = `
   <footer>
     <div>
       <span
-        class=""
+        class="c1"
       >
         E-book Store
       </span>
       <span
-        class=""
+        class="c2"
       >
         Powered by EBANX • Products B2B
       </span>
@@ -32,10 +46,24 @@ exports[`renders correctly fetching ebooks 1`] = `
 `;
 
 exports[`renders correctly fetching ebooks failed 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c1 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c2 {
+  font-size: 14px;
+}
+
 <div>
   <header>
     <span
-      class=""
+      class="c0"
     >
       E-book Store
     </span>
@@ -48,12 +76,12 @@ exports[`renders correctly fetching ebooks failed 1`] = `
   <footer>
     <div>
       <span
-        class=""
+        class="c1"
       >
         E-book Store
       </span>
       <span
-        class=""
+        class="c2"
       >
         Powered by EBANX • Products B2B
       </span>
@@ -63,10 +91,24 @@ exports[`renders correctly fetching ebooks failed 1`] = `
 `;
 
 exports[`renders correctly purchasing fail 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c1 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c2 {
+  font-size: 14px;
+}
+
 <div>
   <header>
     <span
-      class=""
+      class="c0"
     >
       E-book Store
     </span>
@@ -79,12 +121,12 @@ exports[`renders correctly purchasing fail 1`] = `
   <footer>
     <div>
       <span
-        class=""
+        class="c1"
       >
         E-book Store
       </span>
       <span
-        class=""
+        class="c2"
       >
         Powered by EBANX • Products B2B
       </span>
@@ -94,17 +136,58 @@ exports[`renders correctly purchasing fail 1`] = `
 `;
 
 exports[`renders correctly purchasing initial 1`] = `
+.c2 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+}
+
+.c4 {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.c3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.c0 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c1 {
+  font-size: 14px;
+}
+
+.c6 {
+  border: none;
+  height: 2px;
+  background: #dedede;
+}
+
 <div>
   <header>
     <span
-      class=""
+      class="c0"
     >
       E-book Store
     </span>
   </header>
   <div>
     <span
-      class=""
+      class="c1"
     >
       Welcome to the best place for you to learn about Latin América E-commerce. Start to learn now and discovery ways options to improve your sales.
     </span>
@@ -112,29 +195,36 @@ exports[`renders correctly purchasing initial 1`] = `
       <ul>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="1"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="1"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/1.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 1
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 1
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 100,00
             </span>
@@ -142,29 +232,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="2"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="2"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/2.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 2
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 2
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 200,00
             </span>
@@ -172,29 +269,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="3"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="3"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/3.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 3
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 3
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 300,00
             </span>
@@ -202,29 +306,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="4"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="4"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/4.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 4
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 4
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 400,00
             </span>
@@ -232,29 +343,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="5"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="5"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/5.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 5
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 5
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 500,00
             </span>
@@ -262,29 +380,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="6"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="6"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/6.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 6
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 6
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 600,00
             </span>
@@ -292,29 +417,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="7"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="7"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/7.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 7
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 7
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 700,00
             </span>
@@ -322,29 +454,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="8"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="8"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/8.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 8
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 8
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 800,00
             </span>
@@ -352,29 +491,36 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="9"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="9"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/9.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 9
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 9
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 900,00
             </span>
@@ -382,43 +528,53 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
         <li>
           <div>
-            <input
-              class=""
-              type="checkbox"
-              value="10"
-            />
+            <div
+              class="c2"
+            >
+              <div
+                class="c3"
+              />
+              <input
+                class="c4"
+                type="checkbox"
+                value="10"
+              />
+            </div>
             <img
               class=""
-              src=""
+              src="public/images/ebooks/10.png"
             />
             <div>
               <span
-                class=""
+                class="c5"
               >
                 Ebook 10
               </span>
               <span
-                class=""
+                class="c1"
               >
                 The ebook 10
               </span>
             </div>
             <span
-              class=""
+              class="c0"
             >
               R$ 1000,00
             </span>
           </div>
         </li>
       </ul>
+      <hr
+        class="c6"
+      />
       <div>
         <span
-          class=""
+          class="c0"
         >
           TOTAL
         </span>
         <span
-          class=""
+          class="c0"
         >
           R$ 0,00
         </span>
@@ -433,7 +589,7 @@ exports[`renders correctly purchasing initial 1`] = `
             1
           </span>
           <span
-            class=""
+            class="c5"
           >
             Personal data
           </span>
@@ -447,7 +603,7 @@ exports[`renders correctly purchasing initial 1`] = `
             2
           </span>
           <span
-            class=""
+            class="c5"
           >
             Billing Address
           </span>
@@ -461,7 +617,7 @@ exports[`renders correctly purchasing initial 1`] = `
             3
           </span>
           <span
-            class=""
+            class="c5"
           >
             Payment
           </span>
@@ -472,12 +628,12 @@ exports[`renders correctly purchasing initial 1`] = `
   <footer>
     <div>
       <span
-        class=""
+        class="c5"
       >
         E-book Store
       </span>
       <span
-        class=""
+        class="c1"
       >
         Powered by EBANX • Products B2B
       </span>
@@ -487,10 +643,24 @@ exports[`renders correctly purchasing initial 1`] = `
 `;
 
 exports[`renders correctly purchasing success 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.c1 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c2 {
+  font-size: 14px;
+}
+
 <div>
   <header>
     <span
-      class=""
+      class="c0"
     >
       E-book Store
     </span>
@@ -503,12 +673,12 @@ exports[`renders correctly purchasing success 1`] = `
   <footer>
     <div>
       <span
-        class=""
+        class="c1"
       >
         E-book Store
       </span>
       <span
-        class=""
+        class="c2"
       >
         Powered by EBANX • Products B2B
       </span>
