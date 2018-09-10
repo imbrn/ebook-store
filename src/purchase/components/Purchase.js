@@ -1,23 +1,64 @@
-import React from "react";
-import { EbooksList } from "./EbooksList";
-import { PersonalDataForm } from "./PersonalDataForm";
-import { BillingAddressForm } from "./BillingAddressForm";
-import { PaymentForm } from "./PaymentForm";
+import React, { Fragment } from "react";
 import { Text } from "../../common/components";
+import { connect } from "react-redux";
+import EbooksList from "./EbooksList";
+import DataForm from "./DataForm";
 
-export const Purchase = ({ ebooks, purchase, ...rest }) => {
+export const Purchase = ({ ebooks, purchase }) => {
+  const renderContent = () => {
+    switch (ebooks.status.kind) {
+      case "request":
+        return renderContentLoading();
+      case "fail":
+        return renderContentFail();
+      case "success":
+        return renderContentLoaded();
+      default:
+        return null;
+    }
+  };
+
+  const renderContentLoading = () => <div>Loading...</div>;
+  const renderContentFail = () => <div>Fail</div>;
+
+  const renderContentLoaded = () => {
+    switch (purchase.status.kind) {
+      case "success":
+        return renderPurchaseSuccess();
+      case "fail":
+        return renderPurchaseFail();
+      case "initial":
+        return renderPurchasing();
+      default:
+        return null;
+    }
+  };
+
+  const renderPurchaseSuccess = () => <div>Purchase success</div>;
+  const renderPurchaseFail = () => <div>Purchase failed</div>;
+
+  const renderPurchasing = () => (
+    <Fragment>
+      <Text>
+        Welcome to the best place for you to learn about Latin América
+        E-commerce. Start to learn now and discovery ways options to improve
+        your sales.
+      </Text>
+      <EbooksList />
+      <DataForm />
+    </Fragment>
+  );
+
   return (
     <div>
       <header>
-        <Text bold>E-book Store</Text>
+        <Text bold size="medium">
+          E-book Store
+        </Text>
       </header>
-      <div>
-        {purchase.status.type === "success" ? (
-          <Success purchase={purchase} />
-        ) : (
-          <PurchaseForm ebooks={ebooks} purchase={purchase} {...rest} />
-        )}
-      </div>
+
+      <div>{renderContent()}</div>
+
       <footer>
         <div>
           <Text bold>E-book Store</Text>
@@ -28,38 +69,9 @@ export const Purchase = ({ ebooks, purchase, ...rest }) => {
   );
 };
 
-const Success = ({ purchase }) => <div>Purchase done with success</div>;
+const mapStateToProps = state => ({
+  ebooks: state.ebooks,
+  purchase: state.purchase
+});
 
-const PurchaseForm = ({
-  ebooks,
-  purchase,
-  toggleEbookSelection,
-  updatePersonalData,
-  updateBillingAddress,
-  updatePayment,
-  buy
-}) => (
-  <div>
-    <EbooksList
-      selectedEbooks={purchase.selectedEbooks}
-      ebooks={ebooks}
-      toggleEbookSelection={toggleEbookSelection}
-    />
-
-    <PersonalDataForm
-      personalData={purchase.personalData}
-      updatePersonalData={updatePersonalData}
-    />
-
-    <BillingAddressForm
-      billingAddress={purchase.billingAddress}
-      updateBillingAddress={updateBillingAddress}
-    />
-
-    <PaymentForm
-      payment={purchase.payment}
-      updatePayment={updatePayment}
-      requestPurchase={buy}
-    />
-  </div>
-);
+export default connect(mapStateToProps)(Purchase);

@@ -1,5 +1,5 @@
 import { ebooks, status } from "./reducers";
-import { TOGGLE_EBOOK_SELECTION, BUY } from "./actionsTypes";
+import { TOGGLE_EBOOK_SELECTION, REQUEST_BUY } from "./actionsTypes";
 import { fakeEbooks, fakeEbook } from "../ebook/fakeEbook";
 
 describe("ebooks", () => {
@@ -60,7 +60,10 @@ describe("status", () => {
 
   test("handle BUY request", () => {
     expect(
-      status({ kind: "initial" }, { type: BUY, status: "request", data })
+      status(
+        { kind: "initial" },
+        { type: REQUEST_BUY, status: "request", data }
+      )
     ).toEqual({
       kind: "request",
       data
@@ -71,7 +74,7 @@ describe("status", () => {
     expect(
       status(
         { kind: "request" },
-        { type: BUY, status: "success", purchaseId: 123, data }
+        { type: REQUEST_BUY, status: "success", purchaseId: 123, data }
       )
     ).toEqual({
       kind: "success",
@@ -84,7 +87,7 @@ describe("status", () => {
     expect(
       status(
         { kind: "request" },
-        { type: BUY, status: "fail", cause: "Some error", data }
+        { type: REQUEST_BUY, status: "fail", cause: "Some error", data }
       )
     ).toEqual({
       kind: "fail",

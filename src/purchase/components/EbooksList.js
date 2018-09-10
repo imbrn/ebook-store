@@ -1,21 +1,23 @@
 import React from "react";
 import { Text, CheckBox, Image } from "../../common/components";
 import formatPrice from "../../common/utils/formatPrice";
+import { connect } from "react-redux";
+import { toggleEbookSelection } from "../actions";
 
 export const EbooksList = ({
   ebooks,
-  selectedEbooks,
+  purchase,
   formatPrice,
   toggleEbookSelection
 }) => {
   return (
     <div>
       <ul>
-        {ebooks.map(ebook => (
+        {ebooks.items.map(ebook => (
           <li key={ebook.id}>
             <EbookItem
               ebook={ebook}
-              selected={selectedEbooks.includes(ebook)}
+              selected={purchase.ebooks.includes(ebook)}
               formatPrice={formatPrice}
               onRequestSelectChange={() => toggleEbookSelection(ebook)}
             />
@@ -25,7 +27,7 @@ export const EbooksList = ({
 
       <div>
         <Text>TOTAL</Text>
-        <Text>{formatPrice(totalSum(selectedEbooks))}</Text>
+        <Text>{formatPrice(totalSum(purchase.ebooks))}</Text>
       </div>
     </div>
   );
@@ -38,8 +40,8 @@ function totalSum(ebooks) {
 }
 
 EbooksList.defaultProps = {
-  ebooks: [],
-  selectedEbooks: [],
+  ebooks: {},
+  purchase: {},
   formatPrice,
   toggleEbookSelection: () => {}
 };
@@ -72,4 +74,16 @@ EbookItem.defaultProps = {
   onRequestSelectChange: () => {}
 };
 
-export default EbooksList;
+const mapStateToProps = state => ({
+  ebooks: state.ebooks,
+  purchase: state.purchase
+});
+
+const mapDispatchToProps = dispatch => ({
+  toggleEbookSelection: ebook => dispatch(toggleEbookSelection(ebook))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EbooksList);

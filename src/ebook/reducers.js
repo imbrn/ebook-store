@@ -1,4 +1,5 @@
 import { FETCH_ALL_EBOOKS } from "./actionsTypes";
+import { combineReducers } from "redux";
 
 export function ebooks(state = [], action) {
   switch (action.type) {
@@ -41,4 +42,7 @@ function onStatus(action) {
   }
 }
 
-export default ebooks;
+export default combineReducers({
+  items: ebooks,
+  status
+});

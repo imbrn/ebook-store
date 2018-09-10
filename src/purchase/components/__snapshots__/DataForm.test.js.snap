@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form>
+  <div>
+    <header>
+      <span
+        class=""
+      >
+        1
+      </span>
+      <span
+        class=""
+      >
+        Personal data
+      </span>
+    </header>
+  </div>
+  <div>
+    <header>
+      <span
+        class=""
+      >
+        2
+      </span>
+      <span
+        class=""
+      >
+        Billing Address
+      </span>
+    </header>
+  </div>
+  <div>
+    <header>
+      <span
+        class=""
+      >
+        3
+      </span>
+      <span
+        class=""
+      >
+        Payment
+      </span>
+    </header>
+  </div>
+</form>
+`;

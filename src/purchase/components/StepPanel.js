@@ -19,13 +19,17 @@ const StepPanel = ({ open, children, number, title, ...rest }) => (
   </div>
 );
 
+StepPanel.defaultProps = {
+  open: false
+};
+
 const Number = styled.span``;
 
 export { Label, TextField, Button, Select };
 
 export const StepPanelField = ({
   label,
-  component: C,
+  component: C = TextField,
   error,
   fieldId,
   ...rest

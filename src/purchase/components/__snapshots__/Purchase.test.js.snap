@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly initial 1`] = `
+exports[`renders correctly fetching ebooks 1`] = `
 <div>
   <header>
     <span
@@ -11,376 +11,7 @@ exports[`renders correctly initial 1`] = `
   </header>
   <div>
     <div>
-      <div>
-        <ul />
-        <div>
-          <span
-            class=""
-          >
-            TOTAL
-          </span>
-          <span
-            class=""
-          >
-            R$ 0,00
-          </span>
-        </div>
-      </div>
-      <div>
-        <header>
-          <span
-            class=""
-          >
-            1
-          </span>
-          <span
-            class=""
-          >
-            Personal data
-          </span>
-        </header>
-        <div>
-          <form>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="1"
-                >
-                  Name
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="1"
-                  name="name"
-                  placeholder="Your name here"
-                  type="text"
-                  value="Customer Name"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="2"
-                >
-                  E-email
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="2"
-                  name="email"
-                  placeholder="Your e-mail here"
-                  type="text"
-                  value="customer@email.com"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="3"
-                >
-                  CPF
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="3"
-                  name="cpf"
-                  placeholder="Your CPF here"
-                  type="text"
-                  value="123456789"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div>
-        <header>
-          <span
-            class=""
-          >
-            2
-          </span>
-          <span
-            class=""
-          >
-            Billing Address
-          </span>
-        </header>
-        <div>
-          <form>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="4"
-                >
-                  Zip code
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="4"
-                  name="zipCode"
-                  placeholder="Your zip code here"
-                  type="text"
-                  value="12345678"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="5"
-                >
-                  State
-                </label>
-              </div>
-              <div>
-                <div
-                  class="css-10nd86i"
-                  id="5"
-                >
-                  <div
-                    class="css-1aya2g8"
-                  >
-                    <div
-                      class="css-1rtrksz"
-                    >
-                      <div
-                        class="css-1492t68"
-                      >
-                        Your state here
-                      </div>
-                      <div
-                        class="css-rsyb7x"
-                      >
-                        <div
-                          class=""
-                          style="display: inline-block;"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            autocapitalize="none"
-                            autocomplete="off"
-                            autocorrect="off"
-                            id="react-select-2-input"
-                            spellcheck="false"
-                            style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
-                            tabindex="0"
-                            type="text"
-                            value=""
-                          />
-                          <div
-                            style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="css-1wy0on6"
-                    >
-                      <span
-                        class="css-d8oujb"
-                      />
-                      <div
-                        aria-hidden="true"
-                        class="css-1ep9fjw"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="css-19bqh2r"
-                          focusable="false"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          width="20"
-                        >
-                          <path
-                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <input
-                    name="state"
-                    type="hidden"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="6"
-                >
-                  City
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="6"
-                  name="city"
-                  placeholder="Your city here"
-                  type="text"
-                  value="My City"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="7"
-                >
-                  Address
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="7"
-                  name="address"
-                  placeholder="Your full address here"
-                  type="text"
-                  value="My Address, 123"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div>
-        <header>
-          <span
-            class=""
-          >
-            3
-          </span>
-          <span
-            class=""
-          >
-            Payment
-          </span>
-        </header>
-        <div>
-          <div>
-            <button
-              class=""
-            >
-              Boleto Bancário
-            </button>
-            <button
-              class=""
-            >
-              Credit Card
-            </button>
-          </div>
-          <form>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="8"
-                >
-                  Cardholder name
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="8"
-                  name="cardholderName"
-                  placeholder="Your name here"
-                  type="text"
-                  value="Customer Name"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="9"
-                >
-                  Card number
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="9"
-                  name="cardNumber"
-                  placeholder="1234567891011121"
-                  type="text"
-                  value="1234567891011121"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="10"
-                >
-                  Due date
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="10"
-                  name="dueDate"
-                  placeholder="12/25"
-                  type="text"
-                  value="12/25"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label
-                  class=""
-                  for="11"
-                >
-                  CVV
-                </label>
-              </div>
-              <div>
-                <input
-                  class=""
-                  id="11"
-                  name="cvv"
-                  placeholder="123"
-                  type="text"
-                  value="123"
-                />
-              </div>
-            </div>
-            <button
-              class=""
-              disabled=""
-            >
-              Buy now
-            </button>
-          </form>
-        </div>
-      </div>
+      Loading...
     </div>
   </div>
   <footer>
@@ -400,7 +31,7 @@ exports[`renders correctly initial 1`] = `
 </div>
 `;
 
-exports[`renders correctly purchased with success 1`] = `
+exports[`renders correctly fetching ebooks failed 1`] = `
 <div>
   <header>
     <span
@@ -411,7 +42,462 @@ exports[`renders correctly purchased with success 1`] = `
   </header>
   <div>
     <div>
-      Purchase done with success
+      Fail
+    </div>
+  </div>
+  <footer>
+    <div>
+      <span
+        class=""
+      >
+        E-book Store
+      </span>
+      <span
+        class=""
+      >
+        Powered by EBANX • Products B2B
+      </span>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`renders correctly purchasing fail 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      E-book Store
+    </span>
+  </header>
+  <div>
+    <div>
+      Purchase failed
+    </div>
+  </div>
+  <footer>
+    <div>
+      <span
+        class=""
+      >
+        E-book Store
+      </span>
+      <span
+        class=""
+      >
+        Powered by EBANX • Products B2B
+      </span>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`renders correctly purchasing initial 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      E-book Store
+    </span>
+  </header>
+  <div>
+    <span
+      class=""
+    >
+      Welcome to the best place for you to learn about Latin América E-commerce. Start to learn now and discovery ways options to improve your sales.
+    </span>
+    <div>
+      <ul>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="1"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 1
+              </span>
+              <span
+                class=""
+              >
+                The ebook 1
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 100,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="2"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 2
+              </span>
+              <span
+                class=""
+              >
+                The ebook 2
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 200,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="3"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 3
+              </span>
+              <span
+                class=""
+              >
+                The ebook 3
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 300,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="4"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 4
+              </span>
+              <span
+                class=""
+              >
+                The ebook 4
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 400,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="5"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 5
+              </span>
+              <span
+                class=""
+              >
+                The ebook 5
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 500,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="6"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 6
+              </span>
+              <span
+                class=""
+              >
+                The ebook 6
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 600,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="7"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 7
+              </span>
+              <span
+                class=""
+              >
+                The ebook 7
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 700,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="8"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 8
+              </span>
+              <span
+                class=""
+              >
+                The ebook 8
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 800,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="9"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 9
+              </span>
+              <span
+                class=""
+              >
+                The ebook 9
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 900,00
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input
+              class=""
+              type="checkbox"
+              value="10"
+            />
+            <img
+              class=""
+              src=""
+            />
+            <div>
+              <span
+                class=""
+              >
+                Ebook 10
+              </span>
+              <span
+                class=""
+              >
+                The ebook 10
+              </span>
+            </div>
+            <span
+              class=""
+            >
+              R$ 1000,00
+            </span>
+          </div>
+        </li>
+      </ul>
+      <div>
+        <span
+          class=""
+        >
+          TOTAL
+        </span>
+        <span
+          class=""
+        >
+          R$ 0,00
+        </span>
+      </div>
+    </div>
+    <form>
+      <div>
+        <header>
+          <span
+            class=""
+          >
+            1
+          </span>
+          <span
+            class=""
+          >
+            Personal data
+          </span>
+        </header>
+      </div>
+      <div>
+        <header>
+          <span
+            class=""
+          >
+            2
+          </span>
+          <span
+            class=""
+          >
+            Billing Address
+          </span>
+        </header>
+      </div>
+      <div>
+        <header>
+          <span
+            class=""
+          >
+            3
+          </span>
+          <span
+            class=""
+          >
+            Payment
+          </span>
+        </header>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div>
+      <span
+        class=""
+      >
+        E-book Store
+      </span>
+      <span
+        class=""
+      >
+        Powered by EBANX • Products B2B
+      </span>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`renders correctly purchasing success 1`] = `
+<div>
+  <header>
+    <span
+      class=""
+    >
+      E-book Store
+    </span>
+  </header>
+  <div>
+    <div>
+      Purchase success
     </div>
   </div>
   <footer>

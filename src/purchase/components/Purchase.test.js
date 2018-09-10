@@ -1,6 +1,9 @@
 import React from "react";
+import configureMockStore from "redux-mock-store";
+import { Provider } from "react-redux";
+import reduxThunk from "redux-thunk";
 import { render, cleanup } from "react-testing-library";
-import { Purchase } from "./Purchase";
+import Purchase from "./Purchase";
 import { fakeEbooks } from "../../ebook/fakeEbook";
 
 jest.mock("nanoid", () => {
@@ -10,65 +13,111 @@ jest.mock("nanoid", () => {
 
 afterEach(cleanup);
 
+const mockStore = configureMockStore([reduxThunk]);
+
 describe("renders correctly", () => {
-  test("initial", () => {
-    const purchase = {
-      ebooks: fakeEbooks(2),
-      personalData: {
-        name: "Customer Name",
-        email: "customer@email.com",
-        cpf: "123456789"
-      },
-      billingAddress: {
-        zipCode: "12345678",
-        state: "My State",
-        city: "My City",
-        address: "My Address, 123"
-      },
-      payment: {
-        method: "creditCard",
-        cardholderName: "Customer Name",
-        cardNumber: "1234567891011121",
-        dueDate: "12/25",
-        cvv: "123"
-      },
+  test("fetching ebooks", () => {
+    const ebooks = {
       status: {
-        type: "initial"
+        kind: "request"
       }
     };
 
-    const { container } = render(<Purchase purchase={purchase} />);
+    const store = mockStore({ ebooks });
+
+    const { container } = render(
+      <Provider store={store}>
+        <Purchase />
+      </Provider>
+    );
+
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test("purchased with success", () => {
-    const purchase = {
-      ebooks: fakeEbooks(2),
-      personalData: {
-        name: "Customer Name",
-        email: "customer@email.com",
-        cpf: "123456789"
-      },
-      billingAddress: {
-        zipCode: "12345678",
-        state: "My State",
-        city: "My City",
-        address: "My Address, 123"
-      },
-      payment: {
-        method: "creditCard",
-        cardholderName: "Customer Name",
-        cardNumber: "1234567891011121",
-        dueDate: "12/25",
-        cvv: "123"
-      },
+  test("fetching ebooks failed", () => {
+    const ebooks = {
       status: {
-        type: "success",
-        purchaseId: 123
+        kind: "fail",
+        cause: "Some error"
       }
     };
 
-    const { container } = render(<Purchase purchase={purchase} />);
+    const store = mockStore({ ebooks });
+
+    const { container } = render(
+      <Provider store={store}>
+        <Purchase />
+      </Provider>
+    );
+
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  describe("purchasing", () => {
+    let ebooks;
+
+    beforeEach(() => {
+      ebooks = {
+        items: fakeEbooks(10),
+        status: {
+          kind: "success"
+        }
+      };
+    });
+
+    test("success", () => {
+      const purchase = {
+        status: {
+          kind: "success"
+        }
+      };
+
+      const store = mockStore({ ebooks, purchase });
+
+      const { container } = render(
+        <Provider store={store}>
+          <Purchase />
+        </Provider>
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    test("fail", () => {
+      const purchase = {
+        status: {
+          kind: "fail"
+        }
+      };
+
+      const store = mockStore({ ebooks, purchase });
+
+      const { container } = render(
+        <Provider store={store}>
+          <Purchase />
+        </Provider>
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    test("initial", () => {
+      const purchase = {
+        status: {
+          kind: "initial"
+        },
+        ebooks: []
+      };
+
+      const store = mockStore({ ebooks, purchase });
+
+      const { container } = render(
+        <Provider store={store}>
+          <Purchase />
+        </Provider>
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+    });
   });
 });

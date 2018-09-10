@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
-
-import { TOGGLE_EBOOK_SELECTION, BUY } from "./actionsTypes";
+import { TOGGLE_EBOOK_SELECTION, REQUEST_BUY } from "./actionsTypes";
 
 export function ebooks(state = [], action) {
   switch (action.type) {
@@ -24,7 +23,7 @@ function toggleEbookSelection(state, action) {
 
 export function status(state = { kind: "initial" }, action) {
   switch (action.type) {
-    case BUY:
+    case REQUEST_BUY:
       return onStatus(action);
     default:
       return state;

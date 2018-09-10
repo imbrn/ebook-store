@@ -1,4 +1,4 @@
-import { TOGGLE_EBOOK_SELECTION, BUY } from "./actionsTypes";
+import { TOGGLE_EBOOK_SELECTION, REQUEST_BUY } from "./actionsTypes";
 
 import { getService } from "../service";
 
@@ -9,24 +9,28 @@ export function toggleEbookSelection(ebook) {
   };
 }
 
-export function buy(data) {
-  return dispatch => {
-    dispatch(onBuy("request", { data }));
+export function requestBuy(data) {
+  return (dispatch, getState) => {
+    const ebooks = getState().purchase.ebooks;
+
+    dispatch(onRequestBuy("request", { data, ebooks }));
 
     return getService()
-      .buy(data)
+      .requestBuy(ebooks, data)
       .then(result => {
-        dispatch(onBuy("success", { purchaseId: result.id, data }));
+        dispatch(
+          onRequestBuy("success", { purchaseId: result.id, data, ebooks })
+        );
       })
       .catch(cause => {
-        dispatch(onBuy("fail", { cause, data }));
+        dispatch(onRequestBuy("fail", { cause, data, ebooks }));
       });
   };
 }
 
-function onBuy(status, props = {}) {
+function onRequestBuy(status, props = {}) {
   return {
-    type: BUY,
+    type: REQUEST_BUY,
     status,
     ...props
   };

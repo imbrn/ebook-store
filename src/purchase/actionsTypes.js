@@ -1,2 +1,2 @@
 export const TOGGLE_EBOOK_SELECTION = "TOGGLE_EBOOK_SELECTION";
-export const BUY = "BUY";
+export const REQUEST_BUY = "BUY";
