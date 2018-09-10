@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import Select from "react-select";
+import Select from "./Select";
 import CheckBox from "./CheckBox";
 
 export const Text = styled.span`
@@ -9,7 +9,27 @@ export const Text = styled.span`
       font-weight: bold;
     `};
 
-  font-size: ${props => (props.size === "medium" ? "18px" : "14px")};
+  ${props =>
+    props.size === "small" &&
+    css`
+      font-size: 12px;
+    `} ${props =>
+    props.size === "medium" &&
+    css`
+      font-size: 18px;
+    `};
+`;
+
+export const Label = styled.label`
+  ${props =>
+    props.size === "small" &&
+    css`
+      font-size: 12px;
+    `} ${props =>
+    props.size === "medium" &&
+    css`
+      font-size: 18px;
+    `};
 `;
 
 export const Separator = styled.hr`
@@ -18,8 +38,35 @@ export const Separator = styled.hr`
   background: #dedede;
 `;
 
+export const TextField = styled.input.attrs({ type: "text" })`
+  height: 48px;
+  border: 1px solid #c5c5c5;
+  padding: 0 20px;
+
+  &::placeholder {
+    font-size: 12px;
+  }
+`;
+
+export const Button = styled.button`
+  height: 48px;
+  background: white;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: bold;
+  cursor: pointer;
+
+  ${props =>
+    props.selected &&
+    css`
+      border-color: #ececec;
+    `} ${props =>
+    props.highlighted &&
+    css`
+      background: black;
+      color: white;
+    `};
+`;
+
 export const Image = styled.img``;
-export const Label = styled.label``;
-export const TextField = styled.input.attrs({ type: "text" })``;
-export const Button = styled.button``;
 export { Select, CheckBox };

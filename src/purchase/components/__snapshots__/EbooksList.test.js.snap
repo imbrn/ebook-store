@@ -24,14 +24,9 @@ exports[`EbookItem renders correctly 1`] = `
 
 .c3 {
   font-weight: bold;
-  font-size: 14px;
 }
 
 .c4 {
-  font-size: 14px;
-}
-
-.c5 {
   font-weight: bold;
   font-size: 18px;
 }
@@ -60,13 +55,13 @@ exports[`EbookItem renders correctly 1`] = `
       Ebook 15
     </span>
     <span
-      class="c4"
+      class=""
     >
       The ebook 15
     </span>
   </div>
   <span
-    class="c5"
+    class="c4"
   >
     R$ 1500,00
   </span>
@@ -95,7 +90,7 @@ exports[`EbooksList renders correctly 1`] = `
   height: 100%;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -112,19 +107,14 @@ exports[`EbooksList renders correctly 1`] = `
 
 .c3 {
   font-weight: bold;
-  font-size: 14px;
 }
 
 .c4 {
-  font-size: 14px;
-}
-
-.c5 {
   font-weight: bold;
   font-size: 18px;
 }
 
-.c7 {
+.c6 {
   border: none;
   height: 2px;
   background: #dedede;
@@ -157,13 +147,13 @@ exports[`EbooksList renders correctly 1`] = `
             Ebook 1
           </span>
           <span
-            class="c4"
+            class=""
           >
             The ebook 1
           </span>
         </div>
         <span
-          class="c5"
+          class="c4"
         >
           R$ 100,00
         </span>
@@ -175,7 +165,7 @@ exports[`EbooksList renders correctly 1`] = `
           class="c0"
         >
           <div
-            class="c6"
+            class="c5"
           />
           <input
             checked=""
@@ -195,13 +185,13 @@ exports[`EbooksList renders correctly 1`] = `
             Ebook 2
           </span>
           <span
-            class="c4"
+            class=""
           >
             The ebook 2
           </span>
         </div>
         <span
-          class="c5"
+          class="c4"
         >
           R$ 200,00
         </span>
@@ -232,13 +222,13 @@ exports[`EbooksList renders correctly 1`] = `
             Ebook 3
           </span>
           <span
-            class="c4"
+            class=""
           >
             The ebook 3
           </span>
         </div>
         <span
-          class="c5"
+          class="c4"
         >
           R$ 300,00
         </span>
@@ -250,7 +240,7 @@ exports[`EbooksList renders correctly 1`] = `
           class="c0"
         >
           <div
-            class="c6"
+            class="c5"
           />
           <input
             checked=""
@@ -270,13 +260,13 @@ exports[`EbooksList renders correctly 1`] = `
             Ebook 4
           </span>
           <span
-            class="c4"
+            class=""
           >
             The ebook 4
           </span>
         </div>
         <span
-          class="c5"
+          class="c4"
         >
           R$ 400,00
         </span>
@@ -284,16 +274,16 @@ exports[`EbooksList renders correctly 1`] = `
     </li>
   </ul>
   <hr
-    class="c7"
+    class="c6"
   />
   <div>
     <span
-      class="c5"
+      class="c4"
     >
       TOTAL
     </span>
     <span
-      class="c5"
+      class="c4"
     >
       R$ 600,00
     </span>

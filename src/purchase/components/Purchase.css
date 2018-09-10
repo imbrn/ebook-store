@@ -1,0 +1,13 @@
+.root {
+  padding: 0 20px;
+
+  & > header,
+  & > footer {
+    padding: 40px 0;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,21 @@
+.stepPanel {
+  background: #f7f7f7;
+  margin: 40px 0;
+  padding: 40px 60px;
+}
+
+.stepPanelChildren {
+  margin-top: 30px;
+}
+
+.stepPanelField {
+  margin: 10px;
+}
+
+.stepPanelFieldLabelContainer {
+  margin-bottom: 5px;
+}
+
+.stepPanelFieldComponent {
+  width: 100%;
+}

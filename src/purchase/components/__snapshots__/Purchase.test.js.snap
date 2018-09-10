@@ -8,11 +8,6 @@ exports[`renders correctly fetching ebooks 1`] = `
 
 .c1 {
   font-weight: bold;
-  font-size: 14px;
-}
-
-.c2 {
-  font-size: 14px;
 }
 
 <div>
@@ -36,7 +31,7 @@ exports[`renders correctly fetching ebooks 1`] = `
         E-book Store
       </span>
       <span
-        class="c2"
+        class=""
       >
         Powered by EBANX • Products B2B
       </span>
@@ -53,11 +48,6 @@ exports[`renders correctly fetching ebooks failed 1`] = `
 
 .c1 {
   font-weight: bold;
-  font-size: 14px;
-}
-
-.c2 {
-  font-size: 14px;
 }
 
 <div>
@@ -81,7 +71,7 @@ exports[`renders correctly fetching ebooks failed 1`] = `
         E-book Store
       </span>
       <span
-        class="c2"
+        class=""
       >
         Powered by EBANX • Products B2B
       </span>
@@ -98,11 +88,6 @@ exports[`renders correctly purchasing fail 1`] = `
 
 .c1 {
   font-weight: bold;
-  font-size: 14px;
-}
-
-.c2 {
-  font-size: 14px;
 }
 
 <div>
@@ -126,7 +111,7 @@ exports[`renders correctly purchasing fail 1`] = `
         E-book Store
       </span>
       <span
-        class="c2"
+        class=""
       >
         Powered by EBANX • Products B2B
       </span>
@@ -136,14 +121,24 @@ exports[`renders correctly purchasing fail 1`] = `
 `;
 
 exports[`renders correctly purchasing initial 1`] = `
-.c2 {
+.c9 {
+  height: 48px;
+  padding: 0 20px;
+  background: white;
+  border: 1px solid #c5c5c5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 {
   position: relative;
   width: 20px;
   height: 20px;
   border: 2px solid black;
 }
 
-.c4 {
+.c3 {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -151,7 +146,7 @@ exports[`renders correctly purchasing initial 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -162,19 +157,72 @@ exports[`renders correctly purchasing initial 1`] = `
   font-size: 18px;
 }
 
-.c5 {
+.c4 {
   font-weight: bold;
-  font-size: 14px;
 }
 
-.c1 {
-  font-size: 14px;
+.c7 {
+  font-size: 12px;
 }
 
-.c6 {
+.c5 {
   border: none;
   height: 2px;
   background: #dedede;
+}
+
+.c8 {
+  height: 48px;
+  border: 1px solid #c5c5c5;
+  padding: 0 20px;
+}
+
+.c8::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+.c8::-moz-placeholder {
+  font-size: 12px;
+}
+
+.c8:-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.c8::placeholder {
+  font-size: 12px;
+}
+
+.c10 {
+  height: 48px;
+  background: white;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.c11 {
+  height: 48px;
+  background: white;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: bold;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+.c6 {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 100%;
+  font-weight: bold;
+  border: 2px solid black;
+  margin-right: 10px;
 }
 
 <div>
@@ -187,7 +235,7 @@ exports[`renders correctly purchasing initial 1`] = `
   </header>
   <div>
     <span
-      class="c1"
+      class=""
     >
       Welcome to the best place for you to learn about Latin América E-commerce. Start to learn now and discovery ways options to improve your sales.
     </span>
@@ -196,13 +244,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="1"
               />
@@ -213,12 +261,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 1
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 1
               </span>
@@ -233,13 +281,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="2"
               />
@@ -250,12 +298,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 2
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 2
               </span>
@@ -270,13 +318,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="3"
               />
@@ -287,12 +335,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 3
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 3
               </span>
@@ -307,13 +355,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="4"
               />
@@ -324,12 +372,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 4
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 4
               </span>
@@ -344,13 +392,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="5"
               />
@@ -361,12 +409,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 5
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 5
               </span>
@@ -381,13 +429,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="6"
               />
@@ -398,12 +446,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 6
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 6
               </span>
@@ -418,13 +466,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="7"
               />
@@ -435,12 +483,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 7
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 7
               </span>
@@ -455,13 +503,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="8"
               />
@@ -472,12 +520,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 8
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 8
               </span>
@@ -492,13 +540,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="9"
               />
@@ -509,12 +557,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 9
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 9
               </span>
@@ -529,13 +577,13 @@ exports[`renders correctly purchasing initial 1`] = `
         <li>
           <div>
             <div
-              class="c2"
+              class="c1"
             >
               <div
-                class="c3"
+                class="c2"
               />
               <input
-                class="c4"
+                class="c3"
                 type="checkbox"
                 value="10"
               />
@@ -546,12 +594,12 @@ exports[`renders correctly purchasing initial 1`] = `
             />
             <div>
               <span
-                class="c5"
+                class="c4"
               >
                 Ebook 10
               </span>
               <span
-                class="c1"
+                class=""
               >
                 The ebook 10
               </span>
@@ -565,7 +613,7 @@ exports[`renders correctly purchasing initial 1`] = `
         </li>
       </ul>
       <hr
-        class="c6"
+        class="c5"
       />
       <div>
         <span
@@ -581,59 +629,413 @@ exports[`renders correctly purchasing initial 1`] = `
       </div>
     </div>
     <form>
-      <div>
+      <div
+        class=""
+      >
         <header>
           <span
-            class=""
+            class="c6"
           >
             1
           </span>
           <span
-            class="c5"
+            class="c4"
           >
             Personal data
           </span>
         </header>
+        <div
+          class=""
+        >
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="1"
+              >
+                Name
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="1"
+                name="personalData.name"
+                placeholder="Your name here"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="2"
+              >
+                E-mail
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="2"
+                name="personalData.email"
+                placeholder="Your e-mail here"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="3"
+              >
+                CPF
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="3"
+                name="personalData.cpf"
+                placeholder="Your CPF here"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div
+        class=""
+      >
         <header>
           <span
-            class=""
+            class="c6"
           >
             2
           </span>
           <span
-            class="c5"
+            class="c4"
           >
             Billing Address
           </span>
         </header>
+        <div
+          class=""
+        >
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="4"
+              >
+                Zip code
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="4"
+                name="billingAddress.zipCode"
+                placeholder="14530000"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="5"
+              >
+                State
+              </label>
+            </div>
+            <div>
+              <select
+                class="c9"
+                id="5"
+                name="billingAddress.state"
+                placeholder="Your state here"
+              >
+                <option
+                  class=""
+                  value="AC"
+                >
+                  Acre
+                </option>
+                <option
+                  class=""
+                  value="AL"
+                >
+                  Alagoas
+                </option>
+                <option
+                  class=""
+                  value="AP"
+                >
+                  Amapá
+                </option>
+                <option
+                  class=""
+                  value="AM"
+                >
+                  Amazonas
+                </option>
+                <option
+                  class=""
+                  value="BA"
+                >
+                  Bahia
+                </option>
+                <option
+                  class=""
+                  value="CE"
+                >
+                  Ceará
+                </option>
+                <option
+                  class=""
+                  value="DF"
+                >
+                  Distrito Federal
+                </option>
+                <option
+                  class=""
+                  value="ES"
+                >
+                  Espírito Santo
+                </option>
+                <option
+                  class=""
+                  value="GO"
+                >
+                  Goiás
+                </option>
+                <option
+                  class=""
+                  value="MA"
+                >
+                  Maranhão
+                </option>
+                <option
+                  class=""
+                  value="MT"
+                >
+                  Mato Grosso
+                </option>
+                <option
+                  class=""
+                  value="MS"
+                >
+                  Mato Grosso do Sul
+                </option>
+                <option
+                  class=""
+                  value="MG"
+                >
+                  Minas Gerais
+                </option>
+                <option
+                  class=""
+                  value="PA"
+                >
+                  Pará
+                </option>
+                <option
+                  class=""
+                  value="PB"
+                >
+                  Paraíba
+                </option>
+                <option
+                  class=""
+                  value="PR"
+                >
+                  Paraná
+                </option>
+                <option
+                  class=""
+                  value="PE"
+                >
+                  Pernambuco
+                </option>
+                <option
+                  class=""
+                  value="PI"
+                >
+                  Piauí
+                </option>
+                <option
+                  class=""
+                  value="RJ"
+                >
+                  Rio de Janeiro
+                </option>
+                <option
+                  class=""
+                  value="RN"
+                >
+                  Rio Grande do Norte
+                </option>
+                <option
+                  class=""
+                  value="RS"
+                >
+                  Rio Grande do Sul
+                </option>
+                <option
+                  class=""
+                  value="RO"
+                >
+                  Rondônia
+                </option>
+                <option
+                  class=""
+                  value="RR"
+                >
+                  Roraima
+                </option>
+                <option
+                  class=""
+                  value="SC"
+                >
+                  Santa Catarina
+                </option>
+                <option
+                  class=""
+                  value="SP"
+                >
+                  São Paulo
+                </option>
+                <option
+                  class=""
+                  value="SE"
+                >
+                  Sergipe
+                </option>
+                <option
+                  class=""
+                  value="TO"
+                >
+                  Tocantins
+                </option>
+              </select>
+            </div>
+          </div>
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="6"
+              >
+                City
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="6"
+                name="billingAddress.city"
+                placeholder="Your city here"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class=""
+          >
+            <div>
+              <label
+                class="c7"
+                for="7"
+              >
+                Address
+              </label>
+            </div>
+            <div>
+              <input
+                class="c8"
+                id="7"
+                name="billingAddress.address"
+                placeholder="Your full address here"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div
+        class=""
+      >
         <header>
           <span
-            class=""
+            class="c6"
           >
             3
           </span>
           <span
-            class="c5"
+            class="c4"
           >
             Payment
           </span>
         </header>
+        <div
+          class=""
+        >
+          <button
+            class="c10"
+            data-method="boleto"
+            type="button"
+          >
+            Boleto Bancário
+          </button>
+          <button
+            class="c10"
+            data-method="creditCard"
+            type="button"
+          >
+            Credit Card
+          </button>
+          <button
+            class="c11"
+            disabled=""
+            type="submit"
+          >
+            Buy now
+          </button>
+        </div>
       </div>
     </form>
   </div>
   <footer>
     <div>
       <span
-        class="c5"
+        class="c4"
       >
         E-book Store
       </span>
       <span
-        class="c1"
+        class=""
       >
         Powered by EBANX • Products B2B
       </span>
@@ -650,11 +1052,6 @@ exports[`renders correctly purchasing success 1`] = `
 
 .c1 {
   font-weight: bold;
-  font-size: 14px;
-}
-
-.c2 {
-  font-size: 14px;
 }
 
 <div>
@@ -678,7 +1075,7 @@ exports[`renders correctly purchasing success 1`] = `
         E-book Store
       </span>
       <span
-        class="c2"
+        class=""
       >
         Powered by EBANX • Products B2B
       </span>

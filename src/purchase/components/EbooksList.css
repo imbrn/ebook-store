@@ -26,7 +26,7 @@
 }
 
 .totalBox {
-  padding: 38px 0;
+  margin-top: 38px;
   display: flex;
   justify-content: space-between;
 }

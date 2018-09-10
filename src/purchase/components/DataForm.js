@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from "react";
 import StepPanel, { StepPanelField, Button, Select } from "./StepPanel";
 import nanoid from "nanoid";
+import styles from "./DataForm.css";
 import { connect } from "react-redux";
 import { requestBuy } from "../actions";
 import { hasEbooksSelected } from "../selectors";
@@ -57,7 +58,6 @@ export class DataForm extends PureComponent {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -102,11 +102,13 @@ export class DataForm extends PureComponent {
 
     return (
       <StepPanel
+        childrenClassName={styles.stepPanelContent}
         number="1"
         title="Personal data"
         open={this.isPersonalDataOpen()}
       >
         <StepPanelField
+          className={styles.personalDataName}
           fieldId={nameId}
           name="personalData.name"
           label="Name"
@@ -118,6 +120,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.personalDataEmail}
           fieldId={emailId}
           name="personalData.email"
           label="E-mail"
@@ -129,6 +132,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.personalDataCpf}
           fieldId={cpfId}
           name="personalData.cpf"
           label="CPF"
@@ -152,11 +156,13 @@ export class DataForm extends PureComponent {
 
     return (
       <StepPanel
+        childrenClassName={styles.stepPanelContent}
         number="2"
         title="Billing Address"
         open={this.isBillingAddressOpen()}
       >
         <StepPanelField
+          className={styles.billingAddressZipCode}
           fieldId={zipCodeId}
           name={"billingAddress.zipCode"}
           label="Zip code"
@@ -170,6 +176,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.billingAddressState}
           component={Select}
           options={states}
           fieldId={stateId}
@@ -178,11 +185,12 @@ export class DataForm extends PureComponent {
           placeholder="Your state here"
           error={touched.billingAddress.state && errors.billingAddress.state}
           value={states.find(it => it.value === values.billingAddress.state)}
-          onChange={this.handleSelectChange("billingAddress.state")}
+          onChange={this.handleChange}
           onBlur={this.handleBlur}
         />
 
         <StepPanelField
+          className={styles.billingAddressCity}
           fieldId={cityId}
           name={"billingAddress.city"}
           label="City"
@@ -194,6 +202,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.billingAddressAddress}
           fieldId={addressId}
           name={"billingAddress.address"}
           label="Address"
@@ -213,8 +222,14 @@ export class DataForm extends PureComponent {
     const { values } = this.state;
 
     return (
-      <StepPanel number="3" title="Payment" open={this.isPaymentOpen()}>
+      <StepPanel
+        number="3"
+        title="Payment"
+        open={this.isPaymentOpen()}
+        childrenClassName={styles.stepPanelContent}
+      >
         <Button
+          className={styles.paymentMethodButton}
           type="button"
           data-method="boleto"
           selected={values.payment.method === "boleto"}
@@ -224,6 +239,7 @@ export class DataForm extends PureComponent {
         </Button>
 
         <Button
+          className={styles.paymentMethodButton}
           type="button"
           data-method="creditCard"
           selected={values.payment.method === "creditCard"}
@@ -236,7 +252,12 @@ export class DataForm extends PureComponent {
           ? this.renderCreditCardPayment()
           : null}
 
-        <Button highlighted type="submit" disabled={!this.isReadyToSend()}>
+        <Button
+          className={styles.paymentBuyNowButton}
+          highlighted
+          type="submit"
+          disabled={!this.isReadyToSend()}
+        >
           Buy now
         </Button>
       </StepPanel>
@@ -254,6 +275,7 @@ export class DataForm extends PureComponent {
     return (
       <Fragment>
         <StepPanelField
+          className={styles.creditCardCardholderName}
           fieldId={cardholderNameId}
           name={"payment.cardholderName"}
           label="Cardholder name"
@@ -267,6 +289,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.creditCardCardholderName}
           fieldId={cardNumberId}
           name={"payment.cardNumber"}
           label="Card number"
@@ -278,6 +301,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.creditCardDueDate}
           fieldId={dueDateId}
           name={"payment.dueDate"}
           label="Due date"
@@ -289,6 +313,7 @@ export class DataForm extends PureComponent {
         />
 
         <StepPanelField
+          className={styles.creditCardCvv}
           fieldId={cvvId}
           name={"payment.cvv"}
           label="CVV"
@@ -312,15 +337,6 @@ export class DataForm extends PureComponent {
     this.setInnerState("values", section, {
       [name]: e.target.value
     });
-  }
-
-  handleSelectChange(selectName) {
-    return option => {
-      const [section, name] = selectName.split(".");
-      this.setInnerState("values", section, {
-        [name]: option.value
-      });
-    };
   }
 
   handleBlur(e) {

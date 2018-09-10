@@ -1,0 +1,46 @@
+.stepPanelContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personalDataName {
+  width: 100%;
+}
+
+.personalDataEmail,
+.personalDataCpf {
+  flex-grow: 2;
+}
+
+.billingAddressZipCode,
+.billingAddressState,
+.billingAddressCity {
+  flex-grow: 3;
+  flex-basis: 1;
+}
+
+.billingAddressAddress {
+  width: 100%;
+}
+
+.creditCardCardholderName,
+.creditCardCardNumber {
+  width: 100%;
+}
+
+.creditCardDueDate,
+.creditCardCvv {
+  flex-grow: 2;
+}
+
+.paymentMethodButton {
+  flex-grow: 2;
+  margin: 10px;
+  height: 106px;
+}
+
+.paymentBuyNowButton {
+  width: 100%;
+  text-transform: uppercase;
+  margin: 30px 10px 0;
+}

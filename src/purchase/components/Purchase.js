@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
-import { Text } from "../../common/components";
+import { Text, Separator } from "../../common/components";
 import { connect } from "react-redux";
 import EbooksList from "./EbooksList";
 import DataForm from "./DataForm";
+import styles from "./Purchase.css";
 
 export const Purchase = ({ ebooks, purchase }) => {
   const renderContent = () => {
@@ -50,7 +51,7 @@ export const Purchase = ({ ebooks, purchase }) => {
   );
 
   return (
-    <div>
+    <div className={styles.root}>
       <header>
         <Text bold size="medium">
           E-book Store
@@ -59,8 +60,10 @@ export const Purchase = ({ ebooks, purchase }) => {
 
       <div>{renderContent()}</div>
 
+      <Separator />
+
       <footer>
-        <div>
+        <div className={styles.about}>
           <Text bold>E-book Store</Text>
           <Text>Powered by EBANX • Products B2B</Text>
         </div>
