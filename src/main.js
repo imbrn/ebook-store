@@ -5,9 +5,14 @@ import { setService } from "./service";
 
 // Via cep
 function searchZipCode(zipCode) {
-  return fetch(`http://viacep.com.br/ws/${zipCode}/json/`).then(resp =>
-    resp.json()
-  );
+  return fetch(`http://viacep.com.br/ws/${zipCode}/json/`)
+    .then(resp => resp.json())
+    .then(result => {
+      return {
+        state: result.uf,
+        city: result.localidade
+      };
+    });
 }
 
 // Mock service

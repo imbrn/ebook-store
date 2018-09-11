@@ -42,8 +42,8 @@ test("search address by zip code", async () => {
   setService({
     searchZipCode: () => {
       return Promise.resolve({
-        uf: "SP",
-        localidade: "Miguelópolis"
+        state: "SP",
+        city: "Miguelópolis"
       });
     }
   });

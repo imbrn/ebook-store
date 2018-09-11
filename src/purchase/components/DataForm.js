@@ -168,10 +168,10 @@ export class DataForm extends PureComponent {
   autoFillAddress(zipCode) {
     getService()
       .searchZipCode(zipCode)
-      .then(({ uf, localidade }) => {
+      .then(({ state, city }) => {
         this.setInnerState("values", "billingAddress", {
-          state: uf || "",
-          city: localidade || ""
+          state: state || "",
+          city: city || ""
         });
       })
       .catch(() => {
