@@ -1,12 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const rootPath = process.cwd();
 const distPath = path.join(rootPath, "dist");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   context: rootPath,
   entry: "./src/main.js",
   output: {
@@ -26,7 +28,9 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
           {
             loader: "css-loader",
             options: {
@@ -44,10 +48,12 @@ module.exports = {
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(distPath, { allowExternal: true }),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new CopyWebpackPlugin([{ from: "public", to: "public" }])
   ],
   serve: {
     port: 3000

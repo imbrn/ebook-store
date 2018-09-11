@@ -40,7 +40,7 @@
   justify-content: center;
   flex-grow: 2;
   margin: 10px;
-  height: 106px;
+  height: 106px !important;
 
   svg {
     width: auto;
