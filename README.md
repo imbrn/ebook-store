@@ -30,7 +30,7 @@ The application architecture works the following way:
 > right now to see it working. Look at the [Development](#development-mode)
 > section to see how you can start a local server.
 
-For you to use this application with your application back-end service, your
+For you to use this application with your application back-end service, you
 first need to have an application back-end ready to be connected. Then you have
 to edit the `src/main.js` file and point to your service implementation by
 using the `setService` function.
