@@ -123,7 +123,7 @@ should run:
 
   _and this is going to run your test once._
 
-### Development mode
+#### Development mode
 
 To run this application in development mode, run:
 
@@ -136,7 +136,7 @@ application._
 
 So you can access it at: http://localhost:3000
 
-### Building application
+#### Building application
 
 When the application is ready to be deployed, you should run this command:
 
