@@ -68,10 +68,23 @@ export const StepPanelField = ({
 }) => (
   <div className={classnames(styles.stepPanelField, className)}>
     <div className={styles.stepPanelFieldLabelContainer}>
-      <Label htmlFor={fieldId} color={error ? "error" : null} size="small">
+      <Label
+        htmlFor={fieldId}
+        bold={!!error}
+        color={error ? "error" : null}
+        size="small"
+      >
         {label}
       </Label>
-      {error ? <Text type="error">${error}</Text> : null}
+      {error ? (
+        <Text
+          color="error"
+          size="small"
+          className={styles.stepPanelFieldErrorInfo}
+        >
+          ({error})
+        </Text>
+      ) : null}
     </div>
     <div>
       <C

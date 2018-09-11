@@ -6,15 +6,28 @@ import { connect } from "react-redux";
 import { requestBuy } from "../actions";
 import { hasEbooksSelected } from "../selectors";
 import { getService } from "../../service";
-import personalDataValidation from "../validation/personalData";
 import BarCodeSvg from "../../common/icons/bar-code.svg";
 import CreditCardSvg from "../../common/icons/credit-card.svg";
 
+import personalDataValidation, {
+  name as nameValidation,
+  email as emailValidation,
+  cpf as cpfValidation
+} from "../validation/personalData";
+
 import billingAddressValidation, {
-  zipCode as zipCodeValidation
+  zipCode as zipCodeValidation,
+  state as stateValidation,
+  city as cityValidation,
+  address as addressValidation
 } from "../validation/billingAddress";
 
-import creditCardValidation from "../validation/creditCard";
+import creditCardValidation, {
+  cardholderName as cardholderNameValidation,
+  cardNumber as cardNumberValidation,
+  dueDate as dueDateValidation,
+  cvv as cvvValidation
+} from "../validation/creditCard";
 
 export class DataForm extends PureComponent {
   constructor(props) {
@@ -60,14 +73,95 @@ export class DataForm extends PureComponent {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
+    // Validations
+    this.validations = {
+      personalData: {
+        name: {
+          fn: nameValidation,
+          message: "Invalid name"
+        },
+        email: {
+          fn: emailValidation,
+          message: "E-mail address invalid"
+        },
+        cpf: {
+          fn: cpfValidation,
+          message: "Invalid CPF"
+        }
+      },
+      billingAddress: {
+        zipCode: {
+          fn: zipCodeValidation,
+          message: "Invalid zip code"
+        },
+        state: {
+          fn: stateValidation,
+          message: "Invalid state"
+        },
+        city: {
+          fn: cityValidation,
+          message: "Invalid city name"
+        },
+        address: {
+          fn: addressValidation,
+          message: "Invalid full address"
+        }
+      },
+      payment: {
+        cardholderName: {
+          fn: cardholderNameValidation,
+          message: "Invalid cardholder name"
+        },
+        cardNumber: {
+          fn: cardNumberValidation,
+          message: "Invalid card number"
+        },
+        dueDate: {
+          fn: dueDateValidation,
+          message: "Invalid due date"
+        },
+        cvv: {
+          fn: cvvValidation,
+          message: "Invalid CVV"
+        }
+      }
+    };
   }
 
   componentDidUpdate(prevProps, prevState) {
+    this.validateAll(prevState.values, this.state.values, []);
+
     const prevZipCode = prevState.values.billingAddress.zipCode;
     const zipCode = this.state.values.billingAddress.zipCode;
 
     if (prevZipCode != zipCode && zipCodeValidation.test(zipCode)) {
       this.autoFillAddress(zipCode);
+    }
+  }
+
+  validateAll(prevValues, values, keys) {
+    Object.keys(values).forEach(key => {
+      if (typeof values[key] === "object") {
+        this.validateAll(prevValues[key], values[key], [...keys, key]);
+      } else {
+        if (prevValues[key] !== values[key]) {
+          this.validateOne([...keys, key], values[key]);
+        }
+      }
+    });
+  }
+
+  validateOne([section, name], value) {
+    const validation = this.validations[section][name];
+    if (validation && !validation.fn.test(value)) {
+      this.setInnerState("errors", section, {
+        [name]: validation.message
+      });
+    } else {
+      this.setInnerState("errors", section, {
+        [name]: null
+      });
     }
   }
 
@@ -345,6 +439,13 @@ export class DataForm extends PureComponent {
 
   handleBlur(e) {
     const [section, name] = e.target.name.split(".");
+    this.setInnerState("touched", section, {
+      [name]: true
+    });
+    this.touch(section, name);
+  }
+
+  touch(section, name) {
     this.setInnerState("touched", section, {
       [name]: true
     });

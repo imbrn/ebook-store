@@ -18,6 +18,12 @@ export const Text = styled.span`
     css`
       font-size: 18px;
     `};
+
+  ${props =>
+    props.color === "error" &&
+    css`
+      color: red;
+    `};
 `;
 
 export const Label = styled.label`
@@ -29,6 +35,18 @@ export const Label = styled.label`
     props.size === "medium" &&
     css`
       font-size: 18px;
+    `};
+
+  ${props =>
+    props.bold &&
+    css`
+      font-weight: bold;
+    `};
+
+  ${props =>
+    props.color === "error" &&
+    css`
+      color: red;
     `};
 `;
 
@@ -46,6 +64,12 @@ export const TextField = styled.input.attrs({ type: "text" })`
   &::placeholder {
     font-size: 12px;
   }
+
+  ${props =>
+    props.color === "error" &&
+    css`
+      border-color: red;
+    `};
 `;
 
 export const Button = styled.button`
