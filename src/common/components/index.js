@@ -92,5 +92,16 @@ export const Button = styled.button`
     `};
 `;
 
+export const Circle = styled.div`
+  width: 36px;
+  height: 36px;
+  display: flex;
+  border-radius: 100%;
+  background: #d8d8d8;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Image = styled.img``;
+
 export { Select, CheckBox };

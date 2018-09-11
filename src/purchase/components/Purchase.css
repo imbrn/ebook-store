@@ -24,3 +24,23 @@
     margin: 0 2px;
   }
 }
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.successMessageCircle {
+  margin-right: 10px;
+}
+
+.purchaseSuccess {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background: #f7f7f7;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}

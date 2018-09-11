@@ -68,7 +68,15 @@ describe("renders correctly", () => {
     test("success", () => {
       const purchase = {
         status: {
-          kind: "success"
+          kind: "success",
+          data: {
+            personalData: {
+              email: "customer@email.com"
+            },
+            payment: {
+              method: "boleto"
+            }
+          }
         }
       };
 
